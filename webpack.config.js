@@ -7,7 +7,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
-let entry = __dirname + '/app/src/index.js';
+let entry = __dirname + '/app/src/js/app.js';
 let outputPath = path.resolve(__dirname, 'dist');
 let devtool = '';
 
@@ -45,6 +45,12 @@ module.exports = {
         use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       }
     ]
+  },
+  resolve: {
+    modules: ['node_modules'],
+    alias: {
+      'debug.addIndicators': 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'
+    }
   },
   plugins: [
     new CopyPlugin([

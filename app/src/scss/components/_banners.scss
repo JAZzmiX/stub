@@ -1,0 +1,45 @@
+.banner-1 {
+  .banner__img {
+    background-image: url("/public/pubg.jpg");
+  }
+}
+.banner-2 {
+  .banner__img {
+    background-image: url("/public/dota.jpg");
+  }
+}
+.banner-3 {
+  .banner__img {
+    background-image: url("/public/fortnite.jpg");
+  }
+}
+.banner-4 {
+  .banner__img {
+    background-image: url("/public/wot.jpg");
+  }
+}
+
+.banner {
+  position: relative;
+  height: 100vh;
+
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    box-shadow: 0 0 25px #000000;
+  }
+}
+
+.banner__bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  background: $bannerBg;
+}
+
