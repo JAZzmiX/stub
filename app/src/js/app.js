@@ -1,5 +1,5 @@
 import "../scss/style.scss";
-import { ScrollScene } from 'scrollscene';
+import { ScrollScene, addIndicators } from 'scrollscene';
 import { gsap, Linear } from 'gsap';
 
 
@@ -15,7 +15,7 @@ const banner1 = new ScrollScene({
 	gsap: {
 			timeline: Tl1,
 	},
-	duration: '100%',
+	duration: '100%'
 });
 
 
@@ -27,7 +27,7 @@ const bannerBg1 = new ScrollScene({
 	gsap: {
 		timeline: TlBg1,
 	},
-	duration: '100%',
+	duration: '100%'
 });
 		
 
@@ -39,7 +39,7 @@ const banner2 = new ScrollScene({
 	gsap: {
 		timeline: Tl2,
 	},
-	duration: '100%',
+	duration: '100%'
 });
 
 
@@ -102,3 +102,17 @@ const bannerBg4 = new ScrollScene({
 	},
 	duration: '100%'
 });
+
+
+const TlLogo = gsap.timeline({ paused: true })
+	.to('.logo', 1, {y: "150%", ease: Linear.easeNone, zoom: 0.2});
+
+const logo = new ScrollScene({
+	triggerElement: '.test',
+	gsap: {
+		timeline: TlLogo
+	},
+	duration: '100%'
+});
+
+
