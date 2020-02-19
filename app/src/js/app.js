@@ -189,5 +189,4 @@ const subTitle = new ScrollScene({
 	duration: '50%'
 });
 
-
 // subTitle.Scene.addIndicators({ name: 'pin scene', colorEnd: '#FFFFFF' })

@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 let entry = __dirname + '/app/src/js/app.js';
 let outputPath = path.resolve(__dirname, 'dist');
@@ -27,9 +28,6 @@ module.exports = {
   devServer: {
     contentBase: './dist',
     hot: true,
-    output: {
-      
-    }
   },
   module: {
     rules: [
@@ -45,6 +43,10 @@ module.exports = {
         use:  [  'style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       }
     ]
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
   },
   plugins: [
     new CopyPlugin([
