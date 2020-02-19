@@ -11,8 +11,9 @@
 .next
 
 # Next generate
-dist
-build
+/dist
+/build
+/public
 
 # dependencies
 /node_modules
