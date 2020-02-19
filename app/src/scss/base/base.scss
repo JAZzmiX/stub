@@ -38,3 +38,14 @@ h2 {
 .text {
   font-size: 1.3125rem;
 }
+
+
+@media only screen and (max-width: 820px) {
+  h2 {
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    a {
+      margin: 1rem auto;
+    }
+  }
+}
