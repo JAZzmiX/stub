@@ -8,8 +8,6 @@ ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 
 const controller = new ScrollMagic.Controller();
 
-
-
 const Tl1 = new TimelineMax()
 	.to('.banner-1 .banner__img', 1, {y: "150%", ease: Linear.easeNone,  opacity: 0})
 	.to('.banner-1 .banner__img', 1, {y: "-50%", ease: Linear.easeNone,  opacity: 0});
@@ -87,9 +85,9 @@ const banner4 = new ScrollMagic.Scene({
 
 const TlBg4 = new TimelineMax().to('.banner-4 .banner__bg', 1, {y: "-140%", ease: Linear.easeNone, opacity: 0});
 const bannerBg4 = new ScrollMagic.Scene({
-		triggerElement: '.test',
-		triggerHook: 1,
-		duration: '100%'
-		})
-		.setTween(TlBg4)
-		.addTo(controller);
+    triggerElement: '.test',
+    triggerHook: 1,
+    duration: '100%'
+    })
+    .setTween(TlBg4)
+    .addTo(controller);
