@@ -1,4 +1,4 @@
-# Site stub
+# Site stub [DEMO](https://stub.now.sh/)
 
 For dev
 > yarn dev

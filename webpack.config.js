@@ -9,7 +9,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 let entry = __dirname + '/app/src/js/app.js';
-let outputPath = path.resolve(__dirname, 'dist');
+let outputPath = path.resolve(__dirname, 'public');
 let devtool = '';
 
 if (process.env.TESTBUILD) {
@@ -26,7 +26,7 @@ module.exports = {
   },
   devtool: devtool,
   devServer: {
-    contentBase: './dist',
+    contentBase: './public',
     hot: true,
   },
   module: {
@@ -50,8 +50,9 @@ module.exports = {
   },
   plugins: [
     new CopyPlugin([
-      { from: 'public/**/*.*', to: './', force: true },
+      { from: 'images/**/*.*', to: './', force: true },
       { from: 'favicon.ico', to: './', force: true },
+      { from: 'src', to: './', force: true },
     ],
     {
       copyUnmodified: true
@@ -59,7 +60,7 @@ module.exports = {
     new BrowserSyncPlugin({
       host: 'localhost',
       port: 3000,
-      server: { baseDir: ['dist'] }
+      server: { baseDir: ['public'] }
     }),
     new MiniCssExtractPlugin({
       filename: 'style.[hash].css',
