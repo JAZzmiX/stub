@@ -21,7 +21,7 @@ module.exports = {
   entry: entry,
   output: {
     path: outputPath,
-    filename: '[name].js'
+    filename: '[name].[hash].js'
   },
   devtool: devtool,
   devServer: {
@@ -68,7 +68,7 @@ module.exports = {
       template: './app/src/index.html',
       filename: 'index.html'
     }),
-    // new WebpackMd5Hash(),
+    new WebpackMd5Hash(),
     new CleanWebpackPlugin(),
   ]
 }
