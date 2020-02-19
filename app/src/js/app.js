@@ -3,9 +3,6 @@ import { ScrollScene, addIndicators } from 'scrollscene';
 import { gsap, Linear } from 'gsap';
 
 
-
-
-
 const Tl1 = gsap.timeline({ paused: true })
 	.to('.banner-1 .banner__img', 1, {y: "150%", ease: Linear.easeNone,  opacity: 0})
 	.to('.banner-1 .banner__img', 1, {y: "-150%", ease: Linear.easeNone,  opacity: 0});
