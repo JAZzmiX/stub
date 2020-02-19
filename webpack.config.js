@@ -46,12 +46,6 @@ module.exports = {
       }
     ]
   },
-  resolve: {
-    modules: ['node_modules'],
-    alias: {
-      'debug.addIndicators': 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'
-    }
-  },
   plugins: [
     new CopyPlugin([
       { from: 'public/**/*.*', to: './', force: true },
