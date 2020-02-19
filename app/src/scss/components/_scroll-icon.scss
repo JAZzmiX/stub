@@ -1,0 +1,42 @@
+.to-scroll {
+  position: relative;
+  width: 50px;
+  height: 70px;
+  background-color: transparentize(#ffffff, 0.4);
+  border: 10px solid $background;
+  border-radius: 30px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+  svg {
+    position: absolute;
+    zoom: 0.7;
+    z-index: 1;
+    animation: bouncing 0.4s cubic-bezier(.1, .1, .1 ,1) infinite alternate both;
+
+    #screen1 {
+      animation: changeBg 0.7s cubic-bezier(.1, .1, .1 ,1) infinite alternate both;
+    }
+  }
+  
+}
+
+@keyframes bouncing{
+  0%  {
+    bottom: 10px;
+  }
+  100% {
+    bottom: 15px;
+   }
+}
+
+@keyframes changeBg{
+  0%  {
+    fill: white;
+  }
+  100% {
+    fill: black;
+   }
+}
+

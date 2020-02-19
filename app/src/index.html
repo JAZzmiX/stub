@@ -7,11 +7,23 @@
     rel="stylesheet"
     href="<%= htmlWebpackPlugin.files.chunks.main.css %>"
   >
+  <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
 <body>
   <div class="wrapper-logo">
     <div class="logo">
       <img src="/public/logo.png" alt="Challenge Stream logo">
+      <div class="to-scroll">
+        <svg width="19px" height="47px" viewBox="0 0 19 47">
+          <g id="coming-soon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="screen1" transform="translate(-711.000000, -817.000000)" fill="#000000" fill-rule="nonzero">
+                  <g id="mouse" transform="translate(695.000000, 803.000000)">
+                      <path d="M25.3175121,43.6727849 C21.7965576,43.6727849 18.9320306,40.8082579 18.9320306,37.2873035 C18.9320306,33.766349 21.7965576,30.901822 25.3175121,30.901822 C28.8384665,30.901822 31.7029935,33.766349 31.7029935,37.2873035 C31.7029935,40.8082579 28.8384665,43.6727849 25.3175121,43.6727849 Z M25.3175121,34.5506686 C23.8085316,34.5506686 22.5808772,35.778323 22.5808772,37.2873035 C22.5808772,38.7962839 23.8085316,40.0239384 25.3175121,40.0239384 C26.8264925,40.0239384 28.054147,38.7962839 28.054147,37.2873035 C28.054147,35.778323 26.8264925,34.5506686 25.3175121,34.5506686 Z M35,51.1658737 L32.4198094,48.5857743 L25.4087332,55.5968505 L18.6714118,48.8594378 L16.0912212,51.4395372 L25.4088244,60.7570492 L35,51.1658737 Z M35,23.5911756 L25.4087332,14 L16,23.4087332 L18.5801906,25.9888326 L25.4087332,19.1601988 L32.4197182,26.1712749 L35,23.5911756 Z" id="Shape"></path>
+                  </g>
+              </g>
+          </g>
+      </svg>
+      </div>
     </div>
   </div>
   <div class="wrapper">
@@ -33,10 +45,36 @@
         <div class="banner__bg"></div>
       </div>
     </div>
-    <div class="test">
-     <h1>
-      test
-     </h1>
+    <div class="content">
+      <div class="text-wrapper">
+        <div class="mini-logo">
+          <img src="/public/web_logo(white).svg" alt="Challenge Stream">
+        </div>
+        <p class="text">
+          На нашем сайте стримеры смогут посоревноваться между собой в различных челенджах и получить за это денежное вознаграждения!
+        </p>
+        <ul class="icons-list">
+          <li class="icons-list__item">
+            <img src="/public/icons/game.svg" alt="Большой выбор челенджей по топовым играм">
+            <p>Большой выбор челенджей по топовым играм.</p>
+          </li>
+          <li class="icons-list__item">
+            <img src="/public/icons/money.svg" alt="Хорошие денежные призы.">
+            <p>Большой выбор челенджей по топовым играм.</p>
+          </li>
+          <li class="icons-list__item">
+            <img src="/public/icons/honest.svg" alt="Честные правила">
+            <p>Честные правила</p>
+          </li>
+        </ul>
+        <h1>Открытие сайта - скоро!</h1>
+        <h2>
+          Все новости публикуем в нашей группе телеграмм
+          <a href="https://t.me/challengestream" rel="nofollow noopener noreferrer">
+            <img src="/public/telegram.svg" alt="telegram challengestream" target="_blank" >
+          </a>
+        </h2>
+      </div>
     </div>
   </div>
   <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>

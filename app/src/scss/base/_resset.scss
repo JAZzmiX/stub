@@ -3,18 +3,12 @@ html, body {
   height: 100%;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: $background;
-  margin-bottom: -100%;
-}
-
 body, div, ul {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-  text-align: center;
-  color: white;
+h1, h2, p {
+  margin: 0;
 }

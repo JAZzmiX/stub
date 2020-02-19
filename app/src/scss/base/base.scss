@@ -1,2 +1,40 @@
 @import './color';
 @import './resset';
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $background;
+  margin-bottom: -100%;
+  font-family: 'Russo One', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2 {
+  color: $green;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+h1, .text {
+  margin-top: 4rem;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  justify-content: center;
+
+  a {
+    margin-left: 1rem;
+  }
+}
+
+.text {
+  font-size: 1.3125rem;
+}

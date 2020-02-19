@@ -10,7 +10,14 @@
 
 .logo {
   img {
+    position: relative;
     width: 430px;
     height: 556px;
+    z-index: 2;
   }
+}
+
+.mini-logo {
+  display: flex;
+  justify-content: center;
 }
