@@ -1,21 +1,43 @@
+@mixin bg-url($url, $webp1x: false, $url2x: false, $webp2x: false) {
+  background-image: url($url);
+  @if $webp1x {
+    .webp & {
+      background-image: url($webp1x);
+    }
+  }
+  @if $url2x {
+    @media
+    screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      background-image: url($url2x);
+      @if $webp2x {
+        .webp & {
+          background-image: url($webp2x);
+        }
+      }
+    }
+  }
+}
+
 .banner-1 {
   .banner__img {
-    background-image: url("/images/pubg.jpg");
+    @include bg-url("/images/pubg.jpg", "/images/pubg.webp");
   }
 }
 .banner-2 {
   .banner__img {
-    background-image: url("/images/dota.jpg");
+    @include bg-url("/images/dota.jpg", "/images/dota.webp");
   }
 }
 .banner-3 {
   .banner__img {
-    background-image: url("/images/fortnite.jpg");
+    @include bg-url("/images/fortnite.jpg", "/images/fortnite.webp");
   }
 }
 .banner-4 {
   .banner__img {
-    background-image: url("/images/wot.jpg");
+    @include bg-url("/images/wot.jpg", "/images/wot.webp");
   }
 }
 
