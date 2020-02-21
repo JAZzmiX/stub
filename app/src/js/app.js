@@ -19,7 +19,7 @@ import { gsap, Linear } from 'gsap';
     else {
 			const img = new Image();
 	
-      img.onload = img.onerror = ()  => e(2 === img.height),
+      img.onload = img.onerror = () => e(2 === img.height),
 			img.src = "data:image/webp;base64,UklGRi4AAABXRUJQVlA4TCEAAAAvAUAAEB8wAiMwAgSSNtse/cXjxyCCmrYNWPwmHRH9jwMA";
     }
   })(isWebp);
